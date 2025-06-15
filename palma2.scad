@@ -50,7 +50,7 @@ module palma(inner_w, inner_l, h, r, pad, padding, printBackplate) {
 
   module usb(offsets, length) {
     color("red")
-    translate([offsets[0], offsets[1], gen_h/2])
+    translate([offsets[0], offsets[1], gen_h/2-pad])
     // This rotate is just so that the corners of the USB cutout are round
     rotate([90, 0, 0])
     rounded_cube([length, gen_h, 10], 2);
